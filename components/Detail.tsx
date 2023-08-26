@@ -1,38 +1,25 @@
 import type { FC } from 'react';
 import { Text } from 'react-native-paper';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { NavigationStackParamList } from '../types/NavigationStackParamList';
 
-type DetailBaseProps = {
-    what: string;
-    when: string;
-    how: string;
-    example: string
-};
+type DetailProps = NativeStackScreenProps<NavigationStackParamList, 'Detail'>;
 
-const DetailBase: FC<DetailBaseProps> = props => {
+export const Detail: FC<DetailProps> = props => {
+    const params = props.route.params;
     return (
         <>
             <Text variant='titleLarge'>どんなもの？</Text>
-            <Text variant='bodyLarge'>{props.what}</Text>
+            <Text variant='bodyLarge'>{params.what}</Text>
 
             <Text variant='titleLarge'>主にいつ使える？</Text>
-            <Text variant='bodyLarge'>{props.when}</Text>
+            <Text variant='bodyLarge'>{params.when}</Text>
 
             <Text variant='titleLarge'>どうやって使う？</Text>
-            <Text variant='bodyLarge'>{props.how}</Text>
+            <Text variant='bodyLarge'>{params.how}</Text>
 
             <Text variant='titleLarge'>例</Text>
-            <Text variant='bodyLarge'>{props.example}</Text>
+            <Text variant='bodyLarge'>{params.examples}</Text>
         </>
-    );
-};
-
-export const DetailSeventhToTwoFive: FC = () => {
-    return (
-        <DetailBase 
-            what='セブンスコードをツーファイブに分割できる' 
-            when='セブンスコードがドミナントまたはセカンダリードミナントとして四度上のコードに解決するとき' 
-            how='セブンスコードが指定されている部分の前半分をを四度下のマイナーセブンスコードまたはハーフディミニッシュコードに変える' 
-            example='|G7    |CM7    | --> |Dm7 G7 |CM7    |'
-        />
     );
 };
