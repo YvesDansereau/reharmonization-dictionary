@@ -14,7 +14,7 @@ export default function App() {
       <PaperProvider>
         <Stack.Navigator initialRouteName='Top'>
           <Stack.Screen name='Top' component={Top} />
-          <Stack.Screen name='Detail' component={Detail} />
+          <Stack.Screen name='Detail' component={Detail} options={({ route }) => ({ title: route.params.name })} />
         </Stack.Navigator>
         <StatusBar style="auto" />
       </PaperProvider>
