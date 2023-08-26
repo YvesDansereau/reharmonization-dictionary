@@ -1,26 +1,23 @@
-import { Headline, List, Paragraph } from 'react-native-paper';
+import { Text, List } from 'react-native-paper';
 import type { FC } from 'react'
-import { Pressable } from 'react-native';
-import type { NavigationProp } from '@react-navigation/native';
-import { PageName } from '../types/PageName';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { NavigationStackParamList } from '../types/NavigationStackParamList';
+import { DetailContentSeventhToTwoFive } from '../assets/DetailContents';
 
-type TopProps = {
-    navigation: NavigationProp<any> //TODO: specify the class
-};
+type TopProps = NativeStackScreenProps<NavigationStackParamList, 'Top'>;
 
 export const Top: FC<TopProps> = props => {
-    const handlePress = (name: string): void => {
-        props.navigation.navigate(name);
-    };
+    const navigation = props.navigation;
 
     return (
         <>
-            <Headline>リハモ辞典</Headline>
+            <Text variant='headlineLarge'>リハモ辞典</Text>
             <List.AccordionGroup>
                 <List.Accordion title="セブンスコードのリハモ" id="1">
-                    <Pressable onPress={() => {handlePress(PageName.SeventhToTwoFive)}}>
-                        <List.Item title={PageName.SeventhToTwoFive} />
-                    </Pressable>
+                    <List.Item
+                        title={DetailContentSeventhToTwoFive.name}
+                        onPress={() => { navigation.navigate("Detail", DetailContentSeventhToTwoFive) }}
+                    />
                 </List.Accordion>
             </List.AccordionGroup>
         </>
