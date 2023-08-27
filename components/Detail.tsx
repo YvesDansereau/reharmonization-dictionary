@@ -19,7 +19,7 @@ export const Detail: FC<DetailProps> = props => {
             <Text variant='bodyLarge'>{params.how}</Text>
 
             <Text variant='titleLarge'>例</Text>
-            <Text variant='bodyLarge'>{params.examples}</Text>
+            {params.examples.map((example, index) => <Text variant='bodyLarge' key={index}>{example}</Text>)}
         </>
     );
 };

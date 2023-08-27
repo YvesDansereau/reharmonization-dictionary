@@ -3,5 +3,5 @@ export type DetailContent = {
     what: string;
     when: string;
     how: string;
-    examples: string;
+    examples: string[];
 };
