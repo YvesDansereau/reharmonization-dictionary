@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import { Text } from 'react-native-paper';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { NavigationStackParamList } from '../types/NavigationStackParamList';
+import type { NavigationStackParamList } from '../types/NavigationStackParamList';
 
 type DetailProps = NativeStackScreenProps<NavigationStackParamList, 'Detail'>;
 

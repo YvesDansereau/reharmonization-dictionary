@@ -4,7 +4,7 @@ import { Top } from './components/Top';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Detail } from './components/Detail';
-import { NavigationStackParamList } from './types/NavigationStackParamList';
+import type { NavigationStackParamList } from './types/NavigationStackParamList';
 
 const Stack = createNativeStackNavigator<NavigationStackParamList>();
 

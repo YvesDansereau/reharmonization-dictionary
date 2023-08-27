@@ -1,4 +1,4 @@
-import { DetailContent } from "../types/DetailContent";
+import type { DetailContent } from "../types/DetailContent";
 
 export const DetailContentSeventhToTwoFive: DetailContent = {
     name: "ツーファイブへの分割",

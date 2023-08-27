@@ -1,7 +1,7 @@
 import { Text, List } from 'react-native-paper';
 import type { FC } from 'react'
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { NavigationStackParamList } from '../types/NavigationStackParamList';
+import type { NavigationStackParamList } from '../types/NavigationStackParamList';
 import { DetailContentSeventhToTwoFive } from '../assets/DetailContents';
 
 type TopProps = NativeStackScreenProps<NavigationStackParamList, 'Top'>;
