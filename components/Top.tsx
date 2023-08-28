@@ -3,6 +3,7 @@ import type { FC } from 'react'
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import type { NavigationStackParamList } from '../types/NavigationStackParamList';
 import { DetailContentSeventhToTwoFive } from '../assets/DetailContents';
+import { StyleSheet } from 'react-native';
 
 type TopProps = NativeStackScreenProps<NavigationStackParamList, 'Top'>;
 
@@ -11,7 +12,7 @@ export const Top: FC<TopProps> = props => {
 
     return (
         <>
-            <Text variant='headlineLarge'>リハモ辞典</Text>
+            <Text variant='headlineLarge' style={styles.headline}>リハモ辞典</Text>
             <List.AccordionGroup>
                 <List.Accordion title="セブンスコードのリハモ" id="1">
                     <List.Item
@@ -23,3 +24,9 @@ export const Top: FC<TopProps> = props => {
         </>
     );
 };
+
+const styles = StyleSheet.create({
+    headline: {
+        margin: 20
+    }
+});
