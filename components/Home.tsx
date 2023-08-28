@@ -5,9 +5,9 @@ import type { NavigationStackParamList } from '../types/NavigationStackParamList
 import { DetailContentSeventhToTwoFive } from '../assets/DetailContents';
 import { StyleSheet } from 'react-native';
 
-type TopProps = NativeStackScreenProps<NavigationStackParamList, 'Top'>;
+type TopProps = NativeStackScreenProps<NavigationStackParamList, 'Home'>;
 
-export const Top: FC<TopProps> = props => {
+export const Home: FC<TopProps> = props => {
     const navigation = props.navigation;
 
     return (

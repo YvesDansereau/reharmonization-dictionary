@@ -1,6 +1,6 @@
 import type { DetailContent } from "./DetailContent";
 
 export type NavigationStackParamList = {
-    Top: undefined;
+    Home: undefined;
     Detail: DetailContent;
 };
